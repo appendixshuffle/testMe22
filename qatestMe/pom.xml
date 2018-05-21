@@ -57,7 +57,7 @@
                     <includes>
                         <include>**/*Test.java</include>
                     </includes>
-                    <!-- wyklucenia, tu mozna sterowac uruchomieniami (ktore test case'y maja sie odpalic -->
+                    <!-- <excludes>, tu mozna sterowac uruchomieniami (ktore test case'y maja sie odpalic -->
                    <excludes>
                        <exclude>
                            ble
