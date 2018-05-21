@@ -8,6 +8,7 @@ public class JunitTest {
     @Test
     public void firstTest() {
         assertTrue(true);
+
     }
     //sprawdzam czy dziala Team City
 
