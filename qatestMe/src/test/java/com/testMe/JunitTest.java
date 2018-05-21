@@ -11,7 +11,7 @@ public class JunitTest {
 
 
     }
-    //sprawdzam czy dziala Team City
+    //kolejna próba wetryfikacji team City
 
 
 }
