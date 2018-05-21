@@ -23,3 +23,5 @@
 hs_err_pid*
 /.idea/
 /testMe22.iml
+
+/qatestMe/target/
