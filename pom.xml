@@ -5,16 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.testMe</groupId>
-    <artifactId>qatestMe</artifactId>
+    <artifactId>testMe22</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging> <!--packaging, ktory trzeba dodac do modularyzacji POM'a-->
 
-    <!--//to jest parent dla modułów (innych POM'ów)-->
-    <parent>
-        <groupId>com.testMe</groupId>
-        <artifactId>testMe22</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-
+    <!--//tutaj wprowadzona jest modularyzzacja POM'a ,dzieki ktorej uruchamiane sa te lib, ktore chce-->
+    <modules>
+        <module>qatestMe</module>
+    </modules>
 
     <properties>
         <jdk.version>1.8</jdk.version>
@@ -66,25 +64,29 @@
                         <include>**/*Test.java</include>
                     </includes>
                     <!-- <excludes>, tu mozna sterowac uruchomieniami (ktore test case'y maja sie odpalic -->
-                   <excludes>
-                       <exclude>
-                           ble
-                       </exclude>
+                    <excludes>
+                        <exclude>
+                            ble
+                        </exclude>
 
-                   </excludes>
-               </configuration>
-           </plugin>
-       </plugins>
-   </build>
-<dependencies>
-   <dependency>
-       <groupId>junit</groupId>
-       <artifactId>junit</artifactId>
-       <version>4.12</version>
-       <scope>test</scope>
-   </dependency>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <!--//dependencyManagement - zarzadzanie modułami POM'a - zaewsze musi byc w parent-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
 
-</dependencies>
+    </dependencyManagement>
+
 
 
 
