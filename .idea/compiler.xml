@@ -11,6 +11,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="qatestMe" target="1.8" />
+      <module name="testMe22" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
