@@ -1,6 +1,6 @@
 package com.testMe.pages;
 
-import org.openqa.selenium.By;
+import com.testMe.tests.TestDataHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,10 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class MainPage {
+public class MainPage extends BasePage{
     WebDriver driver;
 
     public MainPage(WebDriver driver) {
+        super(driver); //w kosntruktorze super musi byc na pierwszej linii
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -23,7 +24,7 @@ public class MainPage {
 @FindBy(css = "a#hero-plans-anchor.button.is-more-link.is-large")
     public WebElement seePlansButton;
 
-@FindBy(css = "div.page-root div.hp-hero__wrapper h2 ")
+@FindBy(css = "div.page-root div.hp-hero__wrapper h2")
     public WebElement welcomeText;
 
     //weryfikuje, czy na głownej stronie MainPage znajduja sie elementy ( jesli nie ma, to failuje)
@@ -32,7 +33,9 @@ public class MainPage {
         assertTrue(loginButton.isDisplayed());
         assertTrue(getStartedButton.isDisplayed());
         assertTrue(seePlansButton.isDisplayed());
-        assertTrue(welcomeText.getText().equals("Join the global community."));
+        assertTrue(welcomeText.getText().equals("Join the global community."));//szuka tekstu
+        assertTrue(welcomeText.getText().equals(TestDataHelper.joinOurCommunity));//przechowywane sa stringi w klasie TestDataHelper
+
 
         return true;
 
