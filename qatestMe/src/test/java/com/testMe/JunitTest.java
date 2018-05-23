@@ -2,6 +2,7 @@ package com.testMe;
 
 import org.hamcrest.collection.IsEmptyCollection;
 import org.junit.*;
+import org.junit.jupiter.api.Tag;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNot.not;
 import static org.junit.Assert.*;
 
-
+@Tag("all")
 public class JunitTest extends ConfigUnit {
 
     @BeforeClass //wykonuje jednorazowo przed wykonaniem Classy - np. zainicjowac zmienne, pobrac date ze srodoowiska

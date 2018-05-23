@@ -2,10 +2,7 @@ package com.testMe;
 
 import org.junit.Assert;
 //import org.junit.jupiter.api.AssertSame;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.math.BigDecimal;
 
@@ -15,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-
+@Tag("all")
 @DisplayName("JUpiter Test class")  // dzieki JUpiter widac w test result nasze displayName'y - to jest Imie Klasy
 public class JUpiterTest extends ConfigUnit {
 
