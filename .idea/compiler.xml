@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="qatestMe" />
+        <module name="qatestMe-frontend" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="qatestMe" target="1.8" />
+      <module name="qatestMe-frontend" target="1.8" />
       <module name="testMe22" target="1.8" />
     </bytecodeTargetLevel>
   </component>
