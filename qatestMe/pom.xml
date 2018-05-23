@@ -22,14 +22,14 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
     <!--jaki Tag mamy wywołać poprzez uruchmienie komenda mvn z parameterm wskazujacym na tag ( w tym przypadku tagiem jest tests-->
-    <profiles>
-        <profile>
-            <id>allTest</id>
-                <properties>
-                        <tests>all</tests>
-                </properties>
-        </profile>
-    </profiles>
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--<id>allTest</id>-->
+                <!--<properties>-->
+                        <!--<tests>all</tests>-->
+                <!--</properties>-->
+        <!--</profile>-->
+    <!--</profiles>-->
 
 
     <build>
@@ -75,15 +75,14 @@
                     <includes>
                         <include>**/*Test.java</include>
                     </includes>
-                    <properties>
-                        <includeTags>$(tests)</includeTags>
-                    </properties>
+                    <!--<properties>-->
+                        <!--<includeTags>$(tests)</includeTags>-->
+                    <!--</properties>-->
                     <!-- <excludes>, tu mozna sterowac uruchomieniami (ktore test case'y maja sie odpalic -->
                    <excludes>
                        <exclude>
                            ble <!-- tu moge wykluczuć lib, które maja sie nie dociagac-->
                        </exclude>
-
 
                    </excludes>
 
