@@ -45,6 +45,9 @@ public class ApiTest {
 
 
     }
+
+    //w tym tescie wysylamy request do endpoint, odbieramy z niego dane i mapujemy na zmienne name i surname
+    //w klasie Person, która utworzylismy
     @Test
     @DisplayName("First test with mapped object")
     public void firstMappedObjectTest(){
@@ -67,6 +70,7 @@ public class ApiTest {
         assertTrue(person.surname.equals("Kowalski"));
         System.out.println(person.name);
         System.out.println(person.surname);
+        System.out.println(person.toString());
 
     }
 
