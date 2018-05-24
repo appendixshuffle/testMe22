@@ -82,7 +82,7 @@ public class WordpressSteps extends BaseSteps{
     @Then("^Main loged page is displayed$")
     public void mainLogedPageIsDisplayed() throws Throwable {
         MainLoggedPage mainLoggedPage = new MainLoggedPage(driver);
-        mainLoggedPage.isMainContentPresent();
+        mainLoggedPage.mainPageContent.isDisplayed();
 
 
         throw new PendingException();
