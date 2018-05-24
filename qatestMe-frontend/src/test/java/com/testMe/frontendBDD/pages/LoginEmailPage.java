@@ -1,6 +1,6 @@
-package com.testMe.pages;
+package com.testMe.frontendBDD.pages;
 
-import com.testMe.pages.BasePage;
+import com.testMe.frontendFactory.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

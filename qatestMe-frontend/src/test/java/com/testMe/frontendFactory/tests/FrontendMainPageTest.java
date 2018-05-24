@@ -1,11 +1,11 @@
-package com.testMe.tests;
+package com.testMe.frontendFactory.tests;
 
 import com.testMe.Configuration;
-import com.testMe.FrontendConfig;
-import com.testMe.pages.LoginEmailPage;
-import com.testMe.pages.LoginPasswordPage;
-import com.testMe.pages.MainLoggedPage;
-import com.testMe.pages.MainPage;
+import com.testMe.frontendFactory.FrontendConfig;
+import com.testMe.frontendFactory.pages.LoginEmailPage;
+import com.testMe.frontendFactory.pages.LoginPasswordPage;
+import com.testMe.frontendFactory.pages.MainLoggedPage;
+import com.testMe.frontendFactory.pages.MainPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -35,13 +35,13 @@ public class FrontendMainPageTest extends FrontendConfig{
             mainPage.loginButton.click() ;
             loginEmailPage = new LoginEmailPage(driver);
             loginEmailPage.emailField.sendKeys(Configuration.WORDPRESS_EMAIL);
-           // loginEmailPage.waitForVisibilityOfElement(loginEmailPage.continueButton, 15);//tutaj wykorzystuje BasePage class - moje toolsy wykorzystywane w wielu klasach
+            loginEmailPage.waitForVisibilityOfElement(loginEmailPage.continueButton, 15);//tutaj wykorzystuje BasePage class - moje toolsy wykorzystywane w wielu klasach
             loginEmailPage.continueButton.click();
             LoginPasswordPage loginPasswordPage = new LoginPasswordPage(driver);
             loginPasswordPage.passwordField.sendKeys("");
             loginPasswordPage.continuePasswordButton.click();
             MainLoggedPage mainLoggedPage = new MainLoggedPage(driver);
-           // MainLoggedPage.
+            mainLoggedPage.isMainContentPresent();
 
 
 

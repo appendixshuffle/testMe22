@@ -1,6 +1,7 @@
-package com.testMe.pages;
+package com.testMe.frontendBDD.pages;
 
-import com.testMe.tests.TestDataHelper;
+import com.testMe.frontendFactory.TestDataHelper;
+import com.testMe.frontendFactory.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,11 +10,11 @@ import org.openqa.selenium.support.PageFactory;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MainPage extends BasePage{
-    WebDriver driver;
+
 
     public MainPage(WebDriver driver) {
         super(driver); //w kosntruktorze super musi byc na pierwszej linii
-        this.driver = driver;
+
         PageFactory.initElements(driver, this);
     }
 
